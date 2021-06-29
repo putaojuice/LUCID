@@ -5,10 +5,10 @@ using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour
 {
-
-    public NavMeshAgent enemy;
-    public GameObject Base;
-    public Material destructionMat;
+    // SerializeField makes private variables visible in the inspector
+    [SerializeField] NavMeshAgent enemy;
+    [SerializeField] GameObject Base;
+    [SerializeField] Material destructionMat;
     
     // Start is called before the first frame update
     void Start()
@@ -26,13 +26,26 @@ public class EnemyController : MonoBehaviour
      
     }
 
-
+    IEnumerator PlayShockwave(float duration, Renderer shockwave)
+     {
+         float timeElapsed = 0f;
+         float speed = Mathf.Abs(shockwave.material.GetFloat("_Speed"));
+         float phase = shockwave.material.GetFloat("_Phase");
+         float targetPhase = 1 / speed;
+ 
+         while (timeElapsed <= duration)
+         {
+             timeElapsed += Time.deltaTime;
+             shockwave.material.SetFloat("_Phase", Mathf.Lerp(phase, targetPhase, timeElapsed / duration));
+             yield return new WaitForEndOfFrame();
+         }
+     }
 
     IEnumerator PlayDissolve(float duration) 
     {
         float timeElapsed = 0f;
-        Material newMaterial = Instantiate(destructionMat);
         gameObject.GetComponent<MeshRenderer>().material = destructionMat;
+        gameObject.GetComponent<Renderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
 
         while (timeElapsed <= duration)
         {
@@ -46,7 +59,9 @@ public class EnemyController : MonoBehaviour
 	private void EnemyDestroy()
 	{
         if (gameObject != null) {
-            StartCoroutine(PlayDissolve(1.5f)); 
+            // Play enemy dissolve animation from dissolve shader
+            StartCoroutine(PlayDissolve(1f));
+
             // Destroy after 1 sec delay
             Destroy(gameObject, 1.0f);
         }
