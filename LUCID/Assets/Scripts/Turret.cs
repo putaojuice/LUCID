@@ -11,7 +11,7 @@ public class Turret : MonoBehaviour
     public GameObject rotationObject;
     public float rotationSpeed = 5f;
     
-
+    
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +27,15 @@ public class Turret : MonoBehaviour
         {
             return;
         } 
+        else
+        {
+            TargetLockOn ();
+        }
+        
+    }
+
+    void TargetLockOn ()
+    {
         // Target lock on
         Vector3 direction = target.position - transform.position;
         // Quaternion is the way unity deals with rotation angles, eulerAngles convert Quaternion to Vector3

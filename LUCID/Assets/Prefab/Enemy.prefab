@@ -150,4 +150,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 4422713390793206797}
   Base: {fileID: 0}
+  enemyDeath: {fileID: 4422713390793206802, guid: 49e1832ee538c433ab721dd908756371, type: 3}
   destructionMat: {fileID: 2100000, guid: 2c9299eaddd6b0a4a9883afd1d97b276, type: 2}
