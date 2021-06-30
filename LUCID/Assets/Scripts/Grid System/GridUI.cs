@@ -9,15 +9,15 @@ public class GridUI : MonoBehaviour
     public GridGenerate gridGenerate;
     private bool buildMode = false;
 
-    public void Building(GameObject obj)
+    /*public void Building(GameObject obj)
 	{
         gridController.NewBuild(obj);
         TogglePanel();
-	}
+	}*/
 
     public void TogglePanel()
 	{
-        buildingUI.SetActive(buildMode);
+		buildingUI.SetActive(buildMode);
 	}
 
     public void DisableUI()

@@ -8,16 +8,20 @@ public class GridTile : MonoBehaviour
 	private List<GridBase> ground = new List<GridBase>();
 
 
-	public Material greenBuild;
-	public Material redBuild;
+	//public Material greenBuild;
+	//public Material redBuild;
+	public Material tileMat;
+	public Color buildableColor;
+	public Color unbuildableColor;
+
 	public GameObject buildPrefab;
-	private MeshRenderer rend;
+	//private MeshRenderer rend;
 	private bool buildable = false;
 	private bool rotated = false;
 
 	private void Start()
 	{
-		rend = GetComponent<MeshRenderer>();
+		//rend = GetComponent<MeshRenderer>();
 		ChangeColor();
 	}
 
@@ -57,19 +61,21 @@ public class GridTile : MonoBehaviour
 
 	private void ChangeColor()
 	{
-		if(obj.Count == 0)
+		if (obj.Count == 0)
 		{
-			rend.material = greenBuild;
+			//rend.material = greenBuild;
+			tileMat.SetColor("_Color", buildableColor);
 			buildable = true;
 		}
 		else
 		{
-			rend.material = redBuild;
+			//rend.material = redBuild;
+			tileMat.SetColor("_Color", unbuildableColor);
 			buildable = false;
 		}
 	}
 
-	public bool Buildable()
+	public bool GetBuildable()
 	{
 		return buildable;
 	}
@@ -83,8 +89,6 @@ public class GridTile : MonoBehaviour
 
 		Instantiate(buildPrefab, transform.position, transform.rotation);
 		Destroy(gameObject);
-
-		
 	}
 
 	public void Rotate()
