@@ -7,6 +7,7 @@ public class GridTile : MonoBehaviour
     private List<GameObject> obj = new List<GameObject>();
 	private List<GridBase> ground = new List<GridBase>();
 
+
 	public Material greenBuild;
 	public Material redBuild;
 	public GameObject buildPrefab;
@@ -82,6 +83,8 @@ public class GridTile : MonoBehaviour
 
 		Instantiate(buildPrefab, transform.position, transform.rotation);
 		Destroy(gameObject);
+
+		
 	}
 
 	public void Rotate()

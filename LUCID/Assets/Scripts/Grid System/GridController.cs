@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class GridController : MonoBehaviour
 {
@@ -10,11 +11,16 @@ public class GridController : MonoBehaviour
 	private GameObject previewPrefab;
 	private GridTile gridTile;
 	private bool isBuilding = false;
+	private bool onUI = false;
+
+	public NavMeshSurface surf;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+		// BuildNavMesh on start up
+		surf = GetComponent<NavMeshSurface>();
+		surf.BuildNavMesh();
     }
 
     private void Update()
@@ -24,6 +30,20 @@ public class GridController : MonoBehaviour
 
 	public void BuildLogic()
 	{
+		if (Input.GetKeyDown(KeyCode.B))
+		{
+			if (onUI)
+			{
+				onUI = false;
+				StopBuild();
+			}
+			else
+			{
+				onUI = true;
+				gridUI.EnableUI();
+			}
+		}
+
 		if (Input.GetMouseButton(0) && isBuilding && gridTile.Buildable())
 		{
 			BuildIt();
@@ -51,7 +71,6 @@ public class GridController : MonoBehaviour
 		previewPrefab = Instantiate(obj, Vector3.zero, Quaternion.identity);
 		gridTile = previewPrefab.GetComponent<GridTile>();
 		isBuilding = true;
-
 	}
 
 	private void StopBuild()
@@ -60,12 +79,16 @@ public class GridController : MonoBehaviour
 		previewPrefab = null;
 		gridTile = null;
 		isBuilding = false;
-        gridUI.OffPanel();
+		onUI = false;
+        gridUI.DisableUI();
 	}
 
 	private void BuildIt()
 	{
 		gridTile.Build();
+		
+		// update navmesh data in run time
+		surf.UpdateNavMesh(surf.navMeshData);
 		StopBuild();
 	}
 

@@ -6,24 +6,8 @@ public class GridUI : MonoBehaviour
 {
     public GameObject buildingUI;
     public GridController gridController;
-    private bool buildMode = false;
-
     public GridGenerate gridGenerate;
-
-    void Update() 
-    {
-        BuildMode();
-    }
-
-    public void BuildMode()
-    {
-        if(Input.GetKeyDown(KeyCode.B))
-        {
-            buildMode = !buildMode;
-            TogglePanel();
-            gridGenerate.ToggleGrid(buildMode);
-        }
-    }
+    private bool buildMode = false;
 
     public void Building(GameObject obj)
 	{
@@ -36,10 +20,30 @@ public class GridUI : MonoBehaviour
         buildingUI.SetActive(buildMode);
 	}
 
-    public void OffPanel()
+    public void DisableUI()
     {
         buildMode = false;
         buildingUI.SetActive(buildMode);
+        gridGenerate.ToggleGrid(buildMode);
+    }
+
+    public void EnableUI()
+    {
+        /*if (!buildMode) 
+        {
+            buildMode = !buildMode;
+            TogglePanel();
+            gridGenerate.ToggleGrid(buildMode);
+        }
+        else
+		{
+            buildMode = !buildMode;
+            TogglePanel();
+            gridGenerate.ToggleGrid(buildMode);
+		}*/
+
+        buildMode = !buildMode;
+        TogglePanel();
         gridGenerate.ToggleGrid(buildMode);
     }
 }

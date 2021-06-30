@@ -31,7 +31,7 @@ public class GridGenerate : MonoBehaviour
             for (int z = 0; z < zVal; z++)
 			{
                 Vector3 spawnPos = new Vector3(x + blockSize / 2, 0, z + blockSize / 2);
-                GameObject block = (GameObject) Instantiate(blockPrefab, spawnPos, transform.rotation);
+                GameObject block = Instantiate(blockPrefab, spawnPos, transform.rotation);
                 grid.Add(block);
                 block.GetComponent<MeshRenderer>().enabled = false;
                 block.GetComponent<GridBase>().SetGridController(gridController);
