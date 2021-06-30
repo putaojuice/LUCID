@@ -9,6 +9,8 @@ public class EnemyController : MonoBehaviour
     [SerializeField] NavMeshAgent enemy;
     [SerializeField] GameObject Base;
     [SerializeField] Material destructionMat;
+    [SerializeField] float enemyHP = 20f;
+    private bool enemyDeath = false;
     
     // Start is called before the first frame update
     void Start()
@@ -23,23 +25,12 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     
+        if (enemyDeath) 
+        {
+            enemyDeath = false;
+            EnemyDestroy();
+        }
     }
-
-    IEnumerator PlayShockwave(float duration, Renderer shockwave)
-     {
-         float timeElapsed = 0f;
-         float speed = Mathf.Abs(shockwave.material.GetFloat("_Speed"));
-         float phase = shockwave.material.GetFloat("_Phase");
-         float targetPhase = 1 / speed;
- 
-         while (timeElapsed <= duration)
-         {
-             timeElapsed += Time.deltaTime;
-             shockwave.material.SetFloat("_Phase", Mathf.Lerp(phase, targetPhase, timeElapsed / duration));
-             yield return new WaitForEndOfFrame();
-         }
-     }
 
     IEnumerator PlayDissolve(float duration) 
     {
@@ -55,9 +46,25 @@ public class EnemyController : MonoBehaviour
         }
     }
 
+    public void Damaged(float damage)
+    {
+        if (enemyDeath == false) {
+            enemyHP -= damage;
+            
+            if (enemyHP <= 0f)
+            {
+                enemyDeath = true;
+            }
+        }
+    }
+
     // Enemy self destruction method
 	private void EnemyDestroy()
 	{
+        // Stop enemy movement
+        //enemy.SetDestination(transform.position);
+        gameObject.GetComponent<NavMeshAgent>().enabled = false;
+
         if (gameObject != null) {
             // Play enemy dissolve animation from dissolve shader
             StartCoroutine(PlayDissolve(1f));
