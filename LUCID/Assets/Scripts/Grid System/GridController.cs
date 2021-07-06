@@ -31,19 +31,19 @@ public class GridController : MonoBehaviour
 	public void BuildLogic()
 	{
 		// Toggle build mode with "B" key -> on/off the UI pannel as well
-		if (Input.GetKeyDown(KeyCode.B))
-		{
-			if (onUI)
-			{
-				onUI = false;
-				StopBuild();
-			}
-			else
-			{
-				onUI = true;
-				gridUI.EnableUI();
-			}
-		}
+		// if (Input.GetKeyDown(KeyCode.B))
+		// {
+		// 	if (onUI)
+		// 	{
+		// 		onUI = false;
+		// 		StopBuild();
+		// 	}
+		// 	else
+		// 	{
+		// 		onUI = true;
+		// 		gridUI.EnableUI();
+		// 	}
+		// }
 
 		if (Input.GetMouseButton(0) && isBuilding && gridTile.GetBuildable())
 		{
@@ -84,6 +84,7 @@ public class GridController : MonoBehaviour
 		isBuilding = false;
 		onUI = false;
         gridUI.DisableUI();
+		Debug.Log("Block initiated.");
 	}
 
 	private void BuildIt()

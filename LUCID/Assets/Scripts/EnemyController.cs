@@ -6,30 +6,35 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
     // SerializeField makes private variables visible in the inspector
-    [SerializeField] NavMeshAgent enemy;
-    [SerializeField] GameObject Base;
-    [SerializeField] Material destructionMat;
-    [SerializeField] float enemyHP = 20f;
+    [SerializeField] private NavMeshAgent enemy;
+    [SerializeField] private GameObject Base;
+    [SerializeField] private Material destructionMat;
+    [SerializeField] private float enemyHP;
     private bool enemyDeath = false;
     
     // Start is called before the first frame update
     void Start()
     {
-        // Instantiate Base
+        // Initialise Base
         Base = GameObject.Find("Base");
 
-        // enemy will navigate to the Base
+        // Enemy will navigate to the Base
         enemy.SetDestination(Base.transform.position);
+
+        // Initialise enemy HP based on which wave it is right now. Enemy HP increase by 10 every 5 rounds.
+        enemyHP = 10f + Mathf.Ceil(WaveSpawner.wave / 5) * 10f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (enemyDeath) 
+        //enemy.SetDestination(Base.transform.position);
+
+        /*if (enemyDeath) 
         {
             enemyDeath = false;
             EnemyDestroy();
-        }
+        }*/
     }
 
     IEnumerator PlayDissolve(float duration) 
@@ -54,9 +59,15 @@ public class EnemyController : MonoBehaviour
             if (enemyHP <= 0f)
             {
                 enemyDeath = true;
+                EnemyDestroy();
             }
         }
     }
+
+    public bool GetDeath()
+	{
+        return enemyDeath;
+	}
 
     // Enemy self destruction method
 	private void EnemyDestroy()
@@ -64,13 +75,20 @@ public class EnemyController : MonoBehaviour
         // Stop enemy movement
         //enemy.SetDestination(transform.position);
         gameObject.GetComponent<NavMeshAgent>().enabled = false;
-
+        WaveSpawner.numOfEnemyAlive--;
         if (gameObject != null) {
             // Play enemy dissolve animation from dissolve shader
             StartCoroutine(PlayDissolve(1f));
 
             // Destroy after 1 sec delay
             Destroy(gameObject, 1.0f);
+            
+            Debug.Log(WaveSpawner.numOfEnemyAlive);
+
+            if (WaveSpawner.numToSpawn == 0)
+			{
+                WaveSpawner.waveEnd = true;
+			}
         }
 	}
 
@@ -78,6 +96,9 @@ public class EnemyController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
 	{
         Debug.Log("Enemy destroyed");
+        enemyDeath = true;
         EnemyDestroy();
 	}
+
+
 }

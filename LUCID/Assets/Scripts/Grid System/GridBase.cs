@@ -5,7 +5,7 @@ using UnityEngine;
 public class GridBase : MonoBehaviour
 {
     public Color highlightColor;
-    private Color origColor;
+    public Color origColor;
 
     private Renderer rend;
     private bool selected;

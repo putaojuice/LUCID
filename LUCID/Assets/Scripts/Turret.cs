@@ -91,7 +91,8 @@ public class Turret : MonoBehaviour
             }
         }
 
-        if (nearestEnemy != null && shortestDist <= range) 
+        // Only aim enemies that hasn't die yet
+        if (nearestEnemy != null && shortestDist <= range && nearestEnemy.GetComponent<EnemyController>().GetDeath() == false) 
         {
             enemyTarget = nearestEnemy.transform;
         } 
