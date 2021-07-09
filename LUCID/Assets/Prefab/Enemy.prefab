@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 4422713390793206792}
   - component: {fileID: 4422713390793206799}
   - component: {fileID: 4422713390793206798}
+  - component: {fileID: 8695153369549209622}
   - component: {fileID: 4422713390793206797}
-  - component: {fileID: 4422713390793206796}
   - component: {fileID: 4422713390793206803}
   m_Layer: 0
   m_Name: Enemy
@@ -29,7 +29,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4422713390793206802}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.4178343, y: 1, z: 4.5275702}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -98,6 +98,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!143 &8695153369549209622
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4422713390793206802}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!195 &4422713390793206797
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -120,22 +138,6 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!54 &4422713390793206796
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4422713390793206802}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &4422713390793206803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,5 +152,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 4422713390793206797}
   Base: {fileID: 0}
-  enemyDeath: {fileID: 4422713390793206802, guid: 49e1832ee538c433ab721dd908756371, type: 3}
   destructionMat: {fileID: 2100000, guid: 2c9299eaddd6b0a4a9883afd1d97b276, type: 2}
+  enemyHP: 0

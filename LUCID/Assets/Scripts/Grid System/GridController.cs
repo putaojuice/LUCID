@@ -84,7 +84,6 @@ public class GridController : MonoBehaviour
 		isBuilding = false;
 		onUI = false;
         gridUI.DisableUI();
-		Debug.Log("Block initiated.");
 	}
 
 	private void BuildIt()
