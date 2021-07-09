@@ -238,6 +238,5 @@ MonoBehaviour:
     prefab: {fileID: 0}
     upgradedPrefab: {fileID: 0}
     upgradedPrefab2: {fileID: 0}
-  deckManager: {fileID: 0}
   CardName: 
   cardImage: {fileID: 0}
