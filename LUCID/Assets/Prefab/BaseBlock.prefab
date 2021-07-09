@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2279197693637609069}
   m_Layer: 0
   m_Name: BaseBlock
-  m_TagString: Untagged
+  m_TagString: GridFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,7 +115,7 @@ MonoBehaviour:
   turret: {fileID: 0}
   origColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.5, z: 0}
-  turretUpgrades:
+  turretLevel:
     prefab: {fileID: 0}
     upgradedPrefab: {fileID: 0}
     upgradedPrefab2: {fileID: 0}
