@@ -42,15 +42,20 @@ public class WhaleMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) 
     {
-        if (pointer >= size - 1)
+        if (other.tag == "Waypoint")
         {
-            pointer = 0;
-            Next();
-        }
-        else
-        {
-            pointer++;
-            Next();
+            Debug.Log("Waypoint " + pointer + " reached");
+
+            if (pointer >= size - 1)
+            {
+                pointer = 0;
+                Next();
+            }
+            else
+            {
+                pointer++;
+                Next();
+            }
         }
     }
 }

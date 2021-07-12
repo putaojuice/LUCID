@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - GridBase
+  - TurretCard
+  - TetrisCard
+  - GridFloor
+  - Enemy
+  - Waypoint
   layers:
   - Default
   - TransparentFX
