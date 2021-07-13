@@ -85,12 +85,12 @@ Shader "SineVFX/TranslucentCrystals/Crystal"
 		uniform float4 _TranslucencyMask_ST;
 		uniform float _TranslucencyMaskPower;
 
-		inline half4 LightingStandardCustom(SurfaceOutputStandardCustom s, half3 viewDir, UnityGI gi )
+		inline half4 LightingStandardCustom(SurfaceOutputStandardCustom s, half3 viewDir, UnityGI gi)
 		{
 			#if !DIRECTIONAL
-			float3 lightAtten = gi.light.color;
+				float3 lightAtten = gi.light.color;
 			#else
-			float3 lightAtten = lerp( _LightColor0.rgb, gi.light.color, _TransShadow );
+				float3 lightAtten = lerp( _LightColor0.rgb, gi.light.color, _TransShadow );
 			#endif
 			half3 lightDir = gi.light.dir + s.Normal * _TransNormalDistortion;
 			half transVdotL = pow( saturate( dot( viewDir, -lightDir ) ), _TransScattering );
