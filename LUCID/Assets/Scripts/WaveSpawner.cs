@@ -21,9 +21,9 @@ public class WaveSpawner : MonoBehaviour
     // Number of wave
     public static int wave = 0;
 
-    //
+    // Boolean value to determine if wave ended
     public static bool waveEnd = false;
-
+    [SerializeField] private DayNightSystem dayNightSystem;
 
 	private void Start()
 	{
@@ -45,8 +45,8 @@ public class WaveSpawner : MonoBehaviour
             deckManager.DealingTurret();
             deckManager.DealingTetris();
             waveEnd = false;
+            dayNightSystem.DayTime();
 		}
-		
 	}
 
     // Method to spawn enemy
@@ -70,6 +70,7 @@ public class WaveSpawner : MonoBehaviour
         wave ++;
         Debug.Log("Wave number: " + wave);
         DifficultyUpdate();
+        dayNightSystem.NightTime();
 	}
 
     // Updates the values associated to game difficulty after every wave
