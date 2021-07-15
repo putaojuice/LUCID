@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour
 
 	private void Start() 
 	{
-		optionsMenu.SetActive(false);
+		// optionsMenu.SetActive(false);
 		creditsMenu.SetActive(false);
 	}
 
@@ -24,15 +24,15 @@ public class MainMenu : MonoBehaviour
 		SceneManager.LoadScene(1);
 	}
 
-	public void OffSettings()
-	{
-		optionsMenu.SetActive(false);
-	}
+	// public void OffSettings()
+	// {
+	// 	optionsMenu.SetActive(false);
+	// }
 
-	public void OnSettings()
-	{
-		optionsMenu.SetActive(true);
-	}
+	// public void OnSettings()
+	// {
+	// 	optionsMenu.SetActive(true);
+	// }
 
 	public void OffCredits()
 	{
@@ -44,22 +44,22 @@ public class MainMenu : MonoBehaviour
 		creditsMenu.SetActive(true);
 	}
 
-	public void SetVolume(float vol)
-	{
-		audioMixer.SetFloat("Volume", vol);
-	}
+	// public void SetVolume(float vol)
+	// {
+	// 	audioMixer.SetFloat("Volume", vol);
+	// }
 
-	public void ToggleSound()
-	{
-		if (sound)
-		{
-			sound = false;
-			audioMixer.SetFloat("Volume", -80f);
-		}
-		else
-		{
-			sound = true;
-			audioMixer.SetFloat("Volume", 0f);
-		}
-	}
+	// public void ToggleSound()
+	// {
+	// 	if (sound)
+	// 	{
+	// 		sound = false;
+	// 		audioMixer.SetFloat("Volume", -80f);
+	// 	}
+	// 	else
+	// 	{
+	// 		sound = true;
+	// 		audioMixer.SetFloat("Volume", 0f);
+	// 	}
+	// }
 }

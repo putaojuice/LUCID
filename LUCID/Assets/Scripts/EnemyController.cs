@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour
 {
     // SerializeField makes private variables visible in the inspector
     [SerializeField] private NavMeshAgent enemy;
+    [SerializeField] private GameObject enemyObject;
     [SerializeField] private GameObject Base;
     [SerializeField] private Material destructionMat;
     [SerializeField] private float enemyHP;
@@ -40,13 +41,18 @@ public class EnemyController : MonoBehaviour
     IEnumerator PlayDissolve(float duration) 
     {
         float timeElapsed = 0f;
-        gameObject.GetComponent<MeshRenderer>().material = destructionMat;
-        gameObject.GetComponent<Renderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+
+        // Use either SkinnedMeshRenderer or MeshRenderer depending on the renderer component used in the enemy game object
+        // Most animated enemy assets uses SkinnedMeshRenderer while Unity has preset game objects set to MeshRenderer so take note
+        enemyObject.GetComponent<SkinnedMeshRenderer>().material = destructionMat;
+        // enemyObject.GetComponent<MeshRenderer>().material = destructionMat;
+        enemyObject.GetComponent<Renderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
 
         while (timeElapsed <= duration)
         {
             timeElapsed += Time.deltaTime;
-            gameObject.GetComponent<MeshRenderer>().material.SetFloat("_tConstant", Mathf.Lerp(1f, 0f, timeElapsed / duration));
+            // enemyObject.GetComponent<MeshRenderer>().material.SetFloat("_tConstant", Mathf.Lerp(1f, 0f, timeElapsed / duration));
+            enemyObject.GetComponent<SkinnedMeshRenderer>().material.SetFloat("_tConstant", Mathf.Lerp(1f, 0f, timeElapsed / duration));
             yield return new WaitForEndOfFrame();
         }
     }
