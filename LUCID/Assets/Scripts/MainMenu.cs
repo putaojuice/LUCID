@@ -9,7 +9,8 @@ public class MainMenu : MonoBehaviour
 	[SerializeField] private AudioMixer audioMixer;
 	[SerializeField] private GameObject optionsMenu;
 	[SerializeField] private GameObject creditsMenu;
-	private bool sound = true;
+	[SerializeField] private AudioSource buttonSound;
+	// private bool sound = true;
 
 	private void Start() 
 	{
@@ -21,6 +22,7 @@ public class MainMenu : MonoBehaviour
 	{
 		// SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 		// GameLevel scene code from build setting
+		buttonSound.Play();
 		SceneManager.LoadScene(1);
 	}
 
@@ -37,11 +39,13 @@ public class MainMenu : MonoBehaviour
 	public void OffCredits()
 	{
 		creditsMenu.SetActive(false);
+		buttonSound.Play();
 	}
 
 	public void OnCredits()
 	{
 		creditsMenu.SetActive(true);
+		buttonSound.Play();
 	}
 
 	// public void SetVolume(float vol)

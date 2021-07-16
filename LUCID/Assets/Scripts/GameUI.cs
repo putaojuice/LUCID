@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class GameUI : MonoBehaviour
 {
-	public WaveSpawner waveSpawner;
+	[SerializeField] private WaveSpawner waveSpawner;
+	[SerializeField] private AudioSource buttonSound;
 	private bool pause = false;
 
 	public void NextWave()
 	{
 		waveSpawner.NextWave();
+		buttonSound.Play();
 	}
 
 	public void PauseGame()
 	{
+		buttonSound.Play();
 		pause = !pause;
 		if (pause)
 		{

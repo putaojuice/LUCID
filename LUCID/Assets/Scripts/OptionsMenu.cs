@@ -7,6 +7,7 @@ public class OptionsMenu : MonoBehaviour
 {
 	[SerializeField] private AudioMixer audioMixer;
 	[SerializeField] private GameObject optionsMenu;
+	[SerializeField] private AudioSource buttonSound;
 	private static bool sound = true;
 
 	private void Start() 
@@ -17,11 +18,13 @@ public class OptionsMenu : MonoBehaviour
 	public void OffSettings()
 	{
 		optionsMenu.SetActive(false);
+		buttonSound.Play();
 	}
 
 	public void OnSettings()
 	{
 		optionsMenu.SetActive(true);
+		buttonSound.Play();
 	}
 
 	public void SetVolume(float vol)
@@ -39,11 +42,13 @@ public class OptionsMenu : MonoBehaviour
 		{
 			sound = false;
 			audioMixer.SetFloat("Volume", -80f);
+			buttonSound.Play();
 		}
 		else
 		{
 			sound = true;
 			audioMixer.SetFloat("Volume", 0f);
+			buttonSound.Play();
 		}
 	}
 }
