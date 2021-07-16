@@ -15,7 +15,7 @@ public class BaseController : MonoBehaviour
     void Start()
     {
         // Initialise base HP.
-        startHP = 500f;
+        startHP = 10f;
         baseHP = startHP;
     }
 

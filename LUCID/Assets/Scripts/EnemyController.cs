@@ -9,12 +9,13 @@ public class EnemyController : MonoBehaviour
     // SerializeField makes private variables visible in the inspector
     [SerializeField] private NavMeshAgent enemy;
     [SerializeField] private GameObject Base;
+    [SerializeField] private GameObject enemyObject;
     [SerializeField] private Material destructionMat;
     [SerializeField] private float enemyHP;
     private float startHP;
     private bool enemyDeath = false;
 
-    public float enemyDamage = 50f;
+    public float enemyDamage = 1f;
 
     public Image healthBar;
     
@@ -32,16 +33,33 @@ public class EnemyController : MonoBehaviour
         enemyHP = startHP;
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        //enemy.SetDestination(Base.transform.position);
+
+        /*if (enemyDeath) 
+        {
+            enemyDeath = false;
+            EnemyDestroy();
+        }*/
+    }
+
     IEnumerator PlayDissolve(float duration) 
     {
         float timeElapsed = 0f;
-        gameObject.GetComponent<MeshRenderer>().material = destructionMat;
-        gameObject.GetComponent<Renderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+
+        // Use either SkinnedMeshRenderer or MeshRenderer depending on the renderer component used in the enemy game object
+        // Most animated enemy assets uses SkinnedMeshRenderer while Unity has preset game objects set to MeshRenderer so take note
+        enemyObject.GetComponent<SkinnedMeshRenderer>().material = destructionMat;
+        // enemyObject.GetComponent<MeshRenderer>().material = destructionMat;
+        enemyObject.GetComponent<Renderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
 
         while (timeElapsed <= duration)
         {
             timeElapsed += Time.deltaTime;
-            gameObject.GetComponent<MeshRenderer>().material.SetFloat("_tConstant", Mathf.Lerp(1f, 0f, timeElapsed / duration));
+            // enemyObject.GetComponent<MeshRenderer>().material.SetFloat("_tConstant", Mathf.Lerp(1f, 0f, timeElapsed / duration));
+            enemyObject.GetComponent<SkinnedMeshRenderer>().material.SetFloat("_tConstant", Mathf.Lerp(1f, 0f, timeElapsed / duration));
             yield return new WaitForEndOfFrame();
         }
     }
@@ -90,12 +108,14 @@ public class EnemyController : MonoBehaviour
     void BaseHit()
     {        
         Base.GetComponent<BaseController>().Damaged(enemyDamage);
+        healthBar.fillAmount = 0f;
     }
 
 	// When enemy trigger the base's collider
     private void OnTriggerEnter(Collider other)
 	{
         BaseHit();
+        Debug.Log("Enemy destroyed");
         enemyDeath = true;
         EnemyDestroy();
 	}
