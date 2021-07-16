@@ -2,16 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class EnemyController : MonoBehaviour
 {
     // SerializeField makes private variables visible in the inspector
     [SerializeField] private NavMeshAgent enemy;
-    [SerializeField] private GameObject enemyObject;
     [SerializeField] private GameObject Base;
     [SerializeField] private Material destructionMat;
     [SerializeField] private float enemyHP;
+    private float startHP;
     private bool enemyDeath = false;
+
+    public Image healthBar;
     
     // Start is called before the first frame update
     void Start()
@@ -23,7 +26,8 @@ public class EnemyController : MonoBehaviour
         enemy.SetDestination(Base.transform.position);
 
         // Initialise enemy HP based on which wave it is right now. Enemy HP increase by 10 every 5 rounds.
-        enemyHP = 10f + Mathf.Ceil(WaveSpawner.wave / 5) * 10f;
+        startHP = 10f + Mathf.Ceil(WaveSpawner.wave / 5) * 10f;
+        enemyHP = startHP;
     }
 
     // Update is called once per frame
@@ -41,18 +45,13 @@ public class EnemyController : MonoBehaviour
     IEnumerator PlayDissolve(float duration) 
     {
         float timeElapsed = 0f;
-
-        // Use either SkinnedMeshRenderer or MeshRenderer depending on the renderer component used in the enemy game object
-        // Most animated enemy assets uses SkinnedMeshRenderer while Unity has preset game objects set to MeshRenderer so take note
-        enemyObject.GetComponent<SkinnedMeshRenderer>().material = destructionMat;
-        // enemyObject.GetComponent<MeshRenderer>().material = destructionMat;
-        enemyObject.GetComponent<Renderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+        gameObject.GetComponent<MeshRenderer>().material = destructionMat;
+        gameObject.GetComponent<Renderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
 
         while (timeElapsed <= duration)
         {
             timeElapsed += Time.deltaTime;
-            // enemyObject.GetComponent<MeshRenderer>().material.SetFloat("_tConstant", Mathf.Lerp(1f, 0f, timeElapsed / duration));
-            enemyObject.GetComponent<SkinnedMeshRenderer>().material.SetFloat("_tConstant", Mathf.Lerp(1f, 0f, timeElapsed / duration));
+            gameObject.GetComponent<MeshRenderer>().material.SetFloat("_tConstant", Mathf.Lerp(1f, 0f, timeElapsed / duration));
             yield return new WaitForEndOfFrame();
         }
     }
@@ -61,7 +60,8 @@ public class EnemyController : MonoBehaviour
     {
         if (enemyDeath == false) {
             enemyHP -= damage;
-            
+            healthBar.fillAmount = enemyHP / startHP;
+             
             if (enemyHP <= 0f)
             {
                 enemyDeath = true;
