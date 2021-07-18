@@ -27,6 +27,10 @@ public class WaveSpawner : MonoBehaviour
 
 	private void Start()
 	{
+        numToSpawn = 0;
+        numOfEnemyAlive = 0;
+        wave = 0;
+        waveEnd = false;
         deckManager = GameObject.Find("DeckManager").GetComponent<DeckManager>();
     }
 

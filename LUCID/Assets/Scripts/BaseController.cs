@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BaseController : MonoBehaviour
 {
@@ -40,6 +41,7 @@ public class BaseController : MonoBehaviour
             Destroy(gameObject);
             WaveSpawner.waveEnd = true;
             //Play end screen.
+            SceneManager.LoadScene("Defeat");
         }
 	}
 }

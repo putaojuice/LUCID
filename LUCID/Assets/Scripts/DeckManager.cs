@@ -18,6 +18,7 @@ public class DeckManager : MonoBehaviour
 
     private void Awake()
     {
+        currHandSize = 0;
         deckManager = this;
         ResetTurretDeck();
         ResetTetrisDeck();
@@ -110,6 +111,7 @@ public class DeckManager : MonoBehaviour
 
     void Start()
     {
+        currHandSize = 0;
         DealingTurret();
         DealingTetris();
     }
