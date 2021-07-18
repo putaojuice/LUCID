@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 5257483171940884708}
   - component: {fileID: 5979183705107637651}
   - component: {fileID: -4943887601002337747}
+  - component: {fileID: -8004295331970239103}
   m_Layer: 5
   m_Name: z card
   m_TagString: TetrisCard
@@ -281,18 +282,113 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilePreviewPrefab: {fileID: 1834887588513610516, guid: 1985075eb5e664a00b5797c46cfc0e61, type: 3}
-  standardTurret:
+  turret1:
     prefab: {fileID: 0}
     upgradedPrefab: {fileID: 0}
     upgradedPrefab2: {fileID: 0}
-  advancedTurret:
+  turret2:
     prefab: {fileID: 0}
     upgradedPrefab: {fileID: 0}
     upgradedPrefab2: {fileID: 0}
-  moreAdvancedTurret:
+  turret3:
     prefab: {fileID: 0}
     upgradedPrefab: {fileID: 0}
     upgradedPrefab2: {fileID: 0}
-  deckManager: {fileID: 0}
   CardName: 
   cardImage: {fileID: 0}
+--- !u!82 &-8004295331970239103
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4827983078187233998}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: e2f829fe3eee84bc4b3c0b7a6a1762cc, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 70e02441ad3cd8f488092b6a4933e446, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

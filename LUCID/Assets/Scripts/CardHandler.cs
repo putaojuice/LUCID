@@ -41,6 +41,8 @@ public class CardHandler : MonoBehaviour
 
     public void OnMouseDown()
     {
+        GameObject.Find("Button Sound").GetComponent<AudioSource>().Play();
+
         var card = deckManager.Hand.FirstOrDefault(x => x.Name == CardName);
         
         GridController gridController = GameObject.Find("GridGenerator").GetComponent<GridController>();
