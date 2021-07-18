@@ -22,6 +22,9 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Play spawn sound
+        GameObject.Find("Enemy Spawn").GetComponent<AudioSource>().Play();
+
         // Initialise Base
         Base = GameObject.Find("Base");
 

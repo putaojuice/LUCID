@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public float speed = 15f;
-    public float borderSize = 15f;
-    public float clampVal = 20f;
+    [SerializeField] private float speed = 15f;
+    [SerializeField] private float borderSize = 15f;
+    [SerializeField] private float clampVal = 20f;
     private Vector3 pos;
     
 
@@ -36,6 +36,10 @@ public class CameraController : MonoBehaviour
             pos.x += speed * Time.deltaTime;
         }
 
+        float scroll = Input.GetAxis("Mouse ScrollWheel");
+        pos.y += scroll * speed * 150f * Time.deltaTime;
+        
+        pos.y = Mathf.Clamp(pos.y, 10, 20);
         pos.x = Mathf.Clamp(pos.x, 0, clampVal);
         pos.z = Mathf.Clamp(pos.z, 0, clampVal);
 

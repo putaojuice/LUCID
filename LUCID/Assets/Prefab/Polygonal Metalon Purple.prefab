@@ -678,6 +678,7 @@ MonoBehaviour:
   enemyObject: {fileID: 1567726342449172980}
   destructionMat: {fileID: 2100000, guid: 68c3e2ea390e943af932e43e0d1d95e3, type: 2}
   enemyHP: 0
+  spawn: {fileID: 6223411371660988511, guid: dfb3d5d959cdf44cb900e768ba051304, type: 3}
   enemyDamage: 1
   healthBar: {fileID: 3101170386073507242}
 --- !u!114 &1567556252654110333

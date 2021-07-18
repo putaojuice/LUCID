@@ -10,6 +10,7 @@ TagManager:
   - GridFloor
   - Enemy
   - Waypoint
+  - Spawner
   layers:
   - Default
   - TransparentFX

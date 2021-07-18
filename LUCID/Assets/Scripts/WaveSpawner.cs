@@ -5,12 +5,12 @@ using UnityEngine;
 public class WaveSpawner : MonoBehaviour
 {
     // Variables for the spawning point and the type of enemy(prefab) to spawn
-    public GameObject enemyPrefab;
-    public Transform spawnPoint;
+    [SerializeField] private GameObject enemyPrefab;
+    [SerializeField] private Transform spawnPoint;
     private DeckManager deckManager;
 
     // Variable to control the time between each enemy spawn
-    public float timeBetweenSpawn = 1f;
+    [SerializeField] private float timeBetweenSpawn = 1f;
     private float timer = 2f;
 
     // Number of enemy to spawn at a time

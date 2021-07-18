@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10.150024, y: -454}
+  m_AnchoredPosition: {x: 0, y: -470}
   m_SizeDelta: {x: 40, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3962994
@@ -181,7 +181,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1722,52 +1722,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Game produced by
-
-    Won Ye Ji
-
-    Chen Yu An
-
-
-    Special thanks to
-
-    Guo
-    Ai (project advisor)
-
-
-    Game assets used
-
-    Fantasy Skybox Free by Render
-    Knight
-
-    Humpback Whale by janpec
-
-    HYPEPOLY - Isometric Tiles Standart
-    Lite by WAND AND CIRCLES
-
-    Low Poly Cliff Pack by Broken Vector
-
-    Low-Poly
-    Simple Nature Pack by JustCreate
-
-    Simplistic Low Poly Nature by Acorn Bringer
-
-    Standard
-    Assets by Unity Technologies Inc.
-
-    Water Effect Fits For Lowpoly Style by
-    Pure evil Studio
-
-    Clean Settings UI by Landan Lloyd
-
-
-    Sounds used
-
-    Minimal
-    UI Sounds by cabled_mess
-
-
-    THANK YOU FOR PLAYING!'
+  m_text: "Game produced by\nWon Ye Ji\nChen Yu An\n\nSpecial thanks to\nGuo Ai (project
+    advisor)\n\nGame assets used (Unity Assets Store)\nFantasy Skybox Free by Render
+    Knight\nHumpback Whale by janpec\nHYPEPOLY - Isometric Tiles Standart Lite by
+    WAND AND CIRCLES\nLow Poly Cliff Pack by Broken Vector\nLow-Poly Simple Nature
+    Pack by JustCreate\nSimplistic Low Poly Nature by Acorn Bringer\nStandard Assets
+    by Unity Technologies Inc.\nWater Effect Fits For Lowpoly Style by Pure evil
+    Studio\n3D Cartoon Village by COMlad812\nFloating dust particles Effect VFX Particle
+    System by AQSA NADEEM\nFantasy Effect by Pinwheel Studio\nSherbb\u2019s Particle
+    Collection by Sherbb\nClean Settings UI by Landan Lloyd\nMinimal UI Sounds by
+    cabled_mess\nBard's Tales - Peaceful Harp Music Pack Lite LITE by Mythago Music\nThe
+    Fantasy Music Library FREE by Mono Creative\n\nTHANK YOU FOR PLAYING!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1802,7 +1767,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -2142,8 +2107,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1383925367}
-  m_LocalRotation: {x: -0.3242755, y: 0.17515443, z: 0.061231904, w: 0.9275867}
-  m_LocalPosition: {x: -11.06225, y: -24.023651, z: -28.247385}
+  m_LocalRotation: {x: -0.5000004, y: 0, z: 0, w: 0.86602515}
+  m_LocalPosition: {x: 25.06, y: -14.94, z: 5.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3533,8 +3498,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2032341796}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1022.76074, y: -527.6299, z: -3906.5645}
+  m_LocalRotation: {x: -0.5000004, y: 0, z: 0, w: 0.86602515}
+  m_LocalPosition: {x: 25.06, y: -14.94, z: 5.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3610,23 +3575,23 @@ PrefabInstance:
       objectReference: {fileID: 1957504284}
     - target: {fileID: 3467551513747624070, guid: 2aadc017444b9437fb2a930560182284, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3467551513747624070, guid: 2aadc017444b9437fb2a930560182284, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3467551513747629736, guid: 2aadc017444b9437fb2a930560182284, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3467551513747629736, guid: 2aadc017444b9437fb2a930560182284, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3467551513747629736, guid: 2aadc017444b9437fb2a930560182284, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5086531180036153210, guid: 2aadc017444b9437fb2a930560182284, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3719,6 +3684,10 @@ PrefabInstance:
     - target: {fileID: 5086531181055376887, guid: 2aadc017444b9437fb2a930560182284, type: 3}
       propertyPath: m_Name
       value: Options Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086531181055376887, guid: 2aadc017444b9437fb2a930560182284, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7780814111941504941, guid: 2aadc017444b9437fb2a930560182284, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
