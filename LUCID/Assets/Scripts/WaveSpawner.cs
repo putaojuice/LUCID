@@ -87,7 +87,11 @@ public class WaveSpawner : MonoBehaviour
         if (wave % 5 == 0)
 		{
             //numOfSpawn++;
-            timeBetweenSpawn -= 0.1f;
+            if (timeBetweenSpawn >= 0.3f)
+            {
+                timeBetweenSpawn -= 0.1f;
+            }
+            return;
 		}
 	}
 }
