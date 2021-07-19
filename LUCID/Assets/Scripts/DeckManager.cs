@@ -111,7 +111,7 @@ public class DeckManager : MonoBehaviour
 
     void Start()
     {
-        currHandSize = 0;
+        //currHandSize = 0;
         DealingTurret();
         DealingTetris();
     }

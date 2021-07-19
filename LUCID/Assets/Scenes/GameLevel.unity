@@ -5237,6 +5237,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crystalsv01
       objectReference: {fileID: 0}
+    - target: {fileID: 1678884195978160, guid: cc0fd657b60ef8c499b057056b948f16, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4888588471481040, guid: cc0fd657b60ef8c499b057056b948f16, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -21022,8 +21026,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2094126948}
-  m_LocalRotation: {x: -0.4115406, y: 0.04942738, z: 0.02232991, w: 0.90977615}
-  m_LocalPosition: {x: -36.9259, y: -7.7208347, z: -13.4640255}
+  m_LocalRotation: {x: -0.26797256, y: 0.29346806, z: 0.08606242, w: 0.9135976}
+  m_LocalPosition: {x: -53.298943, y: -3.7246811, z: -7.569215}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -21767,7 +21771,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &8346619555893528064
 GameObject:
   m_ObjectHideFlags: 0
