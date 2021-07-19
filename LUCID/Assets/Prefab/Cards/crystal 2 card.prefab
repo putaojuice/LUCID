@@ -118,7 +118,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 175, y: 250}
+  m_SizeDelta: {x: 150, y: 220}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4658745218760323023
 CanvasRenderer:
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b035e4060813b47b08e5dcb15406b451, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0f799b52312b643cea9b8c37e913d012, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -228,13 +228,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePreviewPrefab: {fileID: 0}
   turret1:
-    prefab: {fileID: 1334420156022608, guid: 18b2841f7a99a5f42be7e5d161545f23, type: 3}
-    upgradedPrefab: {fileID: 1591381487688778, guid: da6e8bbd483d22c449e703a7e40afde4, type: 3}
-    upgradedPrefab2: {fileID: 1545413116446980, guid: 36503447f5372ab4495dd42ec08684df, type: 3}
+    prefab: {fileID: 0}
+    upgradedPrefab: {fileID: 0}
+    upgradedPrefab2: {fileID: 0}
   turret2:
-    prefab: {fileID: 1334420156022608, guid: 18b2841f7a99a5f42be7e5d161545f23, type: 3}
-    upgradedPrefab: {fileID: 1591381487688778, guid: da6e8bbd483d22c449e703a7e40afde4, type: 3}
-    upgradedPrefab2: {fileID: 1545413116446980, guid: 36503447f5372ab4495dd42ec08684df, type: 3}
+    prefab: {fileID: 7222351900092146251, guid: 7c1bcf1ffa4953d49be57e513321bcf1, type: 3}
+    upgradedPrefab: {fileID: 9016166546072297658, guid: 65d8db776e810374e85f4634e1458ef0, type: 3}
+    upgradedPrefab2: {fileID: 1741678826899907856, guid: 0eb6a864a51701744aaf4407c198147b, type: 3}
   turret3:
     prefab: {fileID: 0}
     upgradedPrefab: {fileID: 0}

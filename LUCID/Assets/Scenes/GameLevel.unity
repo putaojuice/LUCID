@@ -4984,8 +4984,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectUI, Assembly-CSharp
+      - m_Target: {fileID: 779045170}
+        m_TargetAssemblyTypeName: TurretUI, Assembly-CSharp
         m_MethodName: Destroy
         m_Mode: 1
         m_Arguments:
@@ -11133,8 +11133,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1154027436}
-  m_LocalRotation: {x: -0.1743062, y: 0.081447124, z: 0.014457762, w: 0.9812108}
-  m_LocalPosition: {x: -10.048455, y: -22.641611, z: -36.089798}
+  m_LocalRotation: {x: 0.15054715, y: 0.69168335, z: 0.15090859, w: -0.69002634}
+  m_LocalPosition: {x: 95.75155, y: -39.711525, z: 6.454792}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -14414,7 +14414,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.23, y: -407.8802}
+  m_AnchoredPosition: {x: 25, y: -350}
   m_SizeDelta: {x: 935.96, y: 230.278}
   m_Pivot: {x: 0.49999994, y: 0.5}
 --- !u!114 &1485669864
@@ -15071,8 +15071,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectUI, Assembly-CSharp
+      - m_Target: {fileID: 779045170}
+        m_TargetAssemblyTypeName: TurretUI, Assembly-CSharp
         m_MethodName: Upgrade
         m_Mode: 1
         m_Arguments:
@@ -21026,8 +21026,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2094126948}
-  m_LocalRotation: {x: -0.26797256, y: 0.29346806, z: 0.08606242, w: 0.9135976}
-  m_LocalPosition: {x: -53.298943, y: -3.7246811, z: -7.569215}
+  m_LocalRotation: {x: 0.15279298, y: 0.81464565, z: 0.24826394, w: -0.5013699}
+  m_LocalPosition: {x: -18.870989, y: -8.58335, z: 4.8206854}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

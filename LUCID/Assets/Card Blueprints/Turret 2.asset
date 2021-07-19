@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Turret 2
   prefab: {fileID: 4658745218760322868, guid: 96b1bee71319f4af5a3c37f32ed59afc, type: 3}
-  artwork: {fileID: 21300000, guid: b035e4060813b47b08e5dcb15406b451, type: 3}
+  artwork: {fileID: 21300000, guid: 0f799b52312b643cea9b8c37e913d012, type: 3}
   turretID: 2

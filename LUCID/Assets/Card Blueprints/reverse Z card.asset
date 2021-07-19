@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: reverse Z card
   prefab: {fileID: 1473662029251515314, guid: 5a0633e868f3f4185821886a411b27ab, type: 3}
-  artwork: {fileID: 21300000, guid: 1cd8267e06a76438491f1b1ed8937717, type: 3}
+  artwork: {fileID: 21300000, guid: 906116de43c6b4521baa4458d4f2cbca, type: 3}
   turretID: 0
