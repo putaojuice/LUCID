@@ -72,10 +72,12 @@ public class EnemyController : MonoBehaviour
         if (enemyDeath == false) {
             enemyHP -= damage;
             healthBar.fillAmount = enemyHP / startHP;
-             
+            HighScore.addDamageScore((int) damage);
+
             if (enemyHP <= 0f)
             {
                 enemyDeath = true;
+                HighScore.addDeathScore();
                 EnemyDestroy();
             }
         }
