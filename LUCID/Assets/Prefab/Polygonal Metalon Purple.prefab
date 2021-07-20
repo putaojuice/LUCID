@@ -562,6 +562,7 @@ GameObject:
   - component: {fileID: 1567556252654110335}
   - component: {fileID: 1567556252654110332}
   - component: {fileID: 1567556252654110333}
+  - component: {fileID: 9049454917800545705}
   m_Layer: 0
   m_Name: Polygonal Metalon Purple
   m_TagString: Enemy
@@ -678,7 +679,6 @@ MonoBehaviour:
   enemyObject: {fileID: 1567726342449172980}
   destructionMat: {fileID: 2100000, guid: 68c3e2ea390e943af932e43e0d1d95e3, type: 2}
   enemyHP: 0
-  spawn: {fileID: 6223411371660988511, guid: dfb3d5d959cdf44cb900e768ba051304, type: 3}
   enemyDamage: 1
   healthBar: {fileID: 3101170386073507242}
 --- !u!114 &1567556252654110333
@@ -693,6 +693,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89e027e64b08a479a8790ef63c62d66c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &9049454917800545705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567556252654110330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faa38b853dcd94323b57907385dc9d8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 2644134359904120223}
+  targetPos: {x: 0, y: 0, z: 0}
+  camera: {fileID: 0}
 --- !u!1 &1567575851987914442
 GameObject:
   m_ObjectHideFlags: 0
