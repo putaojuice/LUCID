@@ -22896,8 +22896,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2094126948}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1198.4065, y: -169.3046, z: -4225.5625}
+  m_LocalRotation: {x: 0.19787586, y: 0.7957026, z: 0.34423932, w: -0.45738596}
+  m_LocalPosition: {x: -29.114574, y: -6.9832916, z: -2.3155754}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -23494,6 +23494,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2343452255018283676, guid: 062f61fcac133486fa3d863a26b04572, type: 3}
+      propertyPath: cardHand
+      value: 
+      objectReference: {fileID: 732062406}
+    - target: {fileID: 2343452255018283676, guid: 062f61fcac133486fa3d863a26b04572, type: 3}
+      propertyPath: turretUI
+      value: 
+      objectReference: {fileID: 779045170}
     - target: {fileID: 2343452255018283676, guid: 062f61fcac133486fa3d863a26b04572, type: 3}
       propertyPath: dayNightSystem
       value: 

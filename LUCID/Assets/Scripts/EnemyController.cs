@@ -18,6 +18,8 @@ public class EnemyController : MonoBehaviour
     public float enemyDamage = 1f;
 
     public Image healthBar;
+
+    public GameObject cardHand;
     
     // Start is called before the first frame update
     void Start()
@@ -107,6 +109,7 @@ public class EnemyController : MonoBehaviour
             if (WaveSpawner.numToSpawn == 0)
 			{
                 WaveSpawner.waveEnd = true;
+                cardHand.SetActive(true);
 			}
         }
 	}

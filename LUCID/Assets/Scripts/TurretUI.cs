@@ -33,6 +33,11 @@ public class TurretUI : MonoBehaviour
         ui.SetActive(false);
     }
 
+    public void Unhide ()
+    {
+        ui.SetActive(true);
+    }
+
     public void Upgrade ()
     {
         target.UpgradeTurret();

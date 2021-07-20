@@ -681,6 +681,7 @@ MonoBehaviour:
   enemyHP: 0
   enemyDamage: 1
   healthBar: {fileID: 3101170386073507242}
+  cardHand: {fileID: 0}
 --- !u!114 &1567556252654110333
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -25,6 +25,8 @@ public class WaveSpawner : MonoBehaviour
     public static bool waveEnd = false;
     [SerializeField] private DayNightSystem dayNightSystem;
 
+    public GameObject cardHand;
+
 	private void Start()
 	{
         numToSpawn = 0;
@@ -70,6 +72,7 @@ public class WaveSpawner : MonoBehaviour
 
     public void NextWave()
 	{
+        cardHand.SetActive(false);
         waveEnd = false;
         wave ++;
         Debug.Log("Wave number: " + wave);
