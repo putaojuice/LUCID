@@ -19,12 +19,12 @@ public class EnemyController : MonoBehaviour
 
     public Image healthBar;
 
-    public GameObject cardHand;
+    // public GameObject cardHand;
     
     // Start is called before the first frame update
     void Start()
     {
-        cardHand = GameObject.Find("Card Hand");
+        // cardHand = GameObject.Find("Card Hand");
         // Play spawn sound
         GameObject.Find("Enemy Spawn").GetComponent<AudioSource>().Play();
 
@@ -110,7 +110,7 @@ public class EnemyController : MonoBehaviour
             if (WaveSpawner.numToSpawn == 0)
 			{
                 WaveSpawner.waveEnd = true;
-                cardHand.SetActive(true);
+                // cardHand.SetActive(true);
 			}
         }
 	}

@@ -7,6 +7,7 @@ public class CardHandler : MonoBehaviour
 {
     TurretController turretController;
     public GameObject tilePreviewPrefab;
+    public GameObject turretPreviewPrefab;
     public TurretLevel turret1;
     public TurretLevel turret2;
     public TurretLevel turret3;
@@ -18,7 +19,6 @@ public class CardHandler : MonoBehaviour
     {
         deckManager = GameObject.Find("DeckManager").GetComponent<DeckManager>();
         turretController = TurretController.turretController;
-
     }
     
     private void SelectTurret1 ()
@@ -61,18 +61,21 @@ public class CardHandler : MonoBehaviour
                 if (card.turretID == 1)
                 {
                     TurretBase.BuildingMode();
+                    turretController.NewBuild(turretPreviewPrefab);
                     SelectTurret1();
                     Destruction();
                 }    
                 else if (card.turretID == 2)
                 {
                     TurretBase.BuildingMode();
+                    turretController.NewBuild(turretPreviewPrefab);
                     SelectTurret2();
                     Destruction();
                 }
                 else if (card.turretID == 3)
                 {
                     TurretBase.BuildingMode();
+                    turretController.NewBuild(turretPreviewPrefab);
                     SelectTurret3();
                     Destruction();
                 }

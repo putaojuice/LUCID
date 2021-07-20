@@ -6,16 +6,16 @@ using UnityEngine;
 
     public GameObject healthBar;
     public Vector3 targetPos;
-    public Camera camera;
+    public Camera gameCamera;
 
  // Use this for initialization
  void Start () {
-        camera = GameObject.Find("Main Camera").GetComponent<Camera>();
+        gameCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
     }
  
  // Update is called once per frame
  void Update () {
-        Vector3 targetPos = camera.transform.position;
+        Vector3 targetPos = gameCamera.transform.position;
         targetPos.z = 0;
         healthBar.transform.LookAt(targetPos);
        

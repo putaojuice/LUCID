@@ -227,6 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilePreviewPrefab: {fileID: 0}
+  turretPreviewPrefab: {fileID: 7222351900092146251, guid: c13a501ab1ee544a080bd8a1b378c1ea, type: 3}
   turret1:
     prefab: {fileID: 0}
     upgradedPrefab: {fileID: 0}

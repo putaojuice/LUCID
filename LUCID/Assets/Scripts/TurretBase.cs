@@ -40,9 +40,16 @@ public class TurretBase : MonoBehaviour
             return;
         
         if (building)
-            BuildTurret(turretController.GetTurret());
-            turretController.DeselectBase();
-
+            if (turretController.IsBlockingPath())
+            {
+                return;
+            }
+            else
+            {
+                BuildTurret(turretController.GetTurret());
+                turretController.DeselectBase();
+                turretController.DestroyPreview();    
+            }
     }
 
     void BuildTurret (TurretLevel tl)
@@ -109,5 +116,10 @@ public class TurretBase : MonoBehaviour
     public static void EndBuild()
     {
         building = false;
+    }
+
+    public static bool IsBuilding()
+    {
+        return building;
     }
 }
