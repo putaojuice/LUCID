@@ -41,7 +41,7 @@ public class CardHandler : MonoBehaviour
 
     public void OnMouseDown()
     {
-        GameObject.Find("Button Sound").GetComponent<AudioSource>().Play();
+        GameObject.Find("Card Click Sound").GetComponent<AudioSource>().Play();
 
         var card = deckManager.Hand.FirstOrDefault(x => x.Name == CardName);
         

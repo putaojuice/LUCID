@@ -679,9 +679,9 @@ MonoBehaviour:
   enemyObject: {fileID: 1567726342449172980}
   destructionMat: {fileID: 2100000, guid: 68c3e2ea390e943af932e43e0d1d95e3, type: 2}
   enemyHP: 0
+  hpModifier: 1
   enemyDamage: 1
   healthBar: {fileID: 3101170386073507242}
-  cardHand: {fileID: 0}
 --- !u!114 &1567556252654110333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -708,7 +708,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 2644134359904120223}
   targetPos: {x: 0, y: 0, z: 0}
-  camera: {fileID: 0}
+  gameCamera: {fileID: 0}
 --- !u!1 &1567575851987914442
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ public class InstructionsMenu : MonoBehaviour
     [SerializeField] private GameObject[] circles;
     [SerializeField] private Color selectedColor;
     [SerializeField] private Color notSelectedColor;
+    [SerializeField] private AudioSource buttonSound;
     private int pointer;
 
     // Start is called before the first frame update
@@ -20,6 +21,7 @@ public class InstructionsMenu : MonoBehaviour
     {
         if (pointer < images.Length-1)
         {
+            buttonSound.Play();
             images[pointer].SetActive(false);
             circles[pointer].GetComponent<Image>().color = notSelectedColor;
             pointer++;
@@ -32,6 +34,7 @@ public class InstructionsMenu : MonoBehaviour
     {
         if (pointer > 0)
         {
+            buttonSound.Play();
             images[pointer].SetActive(false);
             circles[pointer].GetComponent<Image>().color = notSelectedColor;
             pointer--;
@@ -42,6 +45,7 @@ public class InstructionsMenu : MonoBehaviour
 
     public void OpenInstructions()
     {
+        buttonSound.Play();
         gameObject.SetActive(true);
         images[pointer].SetActive(false);
         circles[pointer].GetComponent<Image>().color = notSelectedColor;
@@ -53,6 +57,7 @@ public class InstructionsMenu : MonoBehaviour
 
     public void CloseInstructions()
     {
+        buttonSound.Play();
         gameObject.SetActive(false);
     }
 }

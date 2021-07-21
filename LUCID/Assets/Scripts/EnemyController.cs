@@ -12,6 +12,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private GameObject enemyObject;
     [SerializeField] private Material destructionMat;
     [SerializeField] private float enemyHP;
+    [SerializeField] private float hpModifier;
     private float startHP;
     private bool enemyDeath = false;
 
@@ -35,7 +36,7 @@ public class EnemyController : MonoBehaviour
         enemy.SetDestination(Base.transform.position);
 
         // Initialise enemy HP based on which wave it is right now. Enemy HP increase by 10 every 5 rounds.
-        startHP = 10f + Mathf.Ceil(WaveSpawner.wave / 5) * 10f;
+        startHP = 10f + Mathf.Ceil(WaveSpawner.wave / 5) * 10f * hpModifier;
         enemyHP = startHP;
     }
 

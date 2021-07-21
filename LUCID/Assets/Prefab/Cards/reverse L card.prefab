@@ -282,6 +282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilePreviewPrefab: {fileID: 253998807282897585, guid: 42d998c8c65354b70929ca2615637061, type: 3}
+  turretPreviewPrefab: {fileID: 0}
   turret1:
     prefab: {fileID: 0}
     upgradedPrefab: {fileID: 0}
@@ -306,7 +307,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: e2f829fe3eee84bc4b3c0b7a6a1762cc, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 70e02441ad3cd8f488092b6a4933e446, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6e8772b49f34d402a90016ed445d8a2f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

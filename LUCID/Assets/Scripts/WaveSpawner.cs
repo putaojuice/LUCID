@@ -6,6 +6,8 @@ public class WaveSpawner : MonoBehaviour
 {
     // Variables for the spawning point and the type of enemy(prefab) to spawn
     [SerializeField] private GameObject enemyPrefab;
+    [SerializeField] private GameObject enemyPrefabTank;
+    [SerializeField] private GameObject enemyPrefabSpeed;
     [SerializeField] private Transform spawnPoint;
     private DeckManager deckManager;
 
@@ -62,11 +64,28 @@ public class WaveSpawner : MonoBehaviour
         {
             numToSpawn--;
             Debug.Log("Enemy spawned");
-            Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+            InstantiatingEnemy(wave);
+            //Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
             numOfEnemyAlive++;
             Debug.Log(numOfEnemyAlive);
             Debug.Log(numToSpawn);
             
+        }
+    }
+
+    void InstantiatingEnemy(int n)
+    {
+        if (n > 0 && n % 3 == 0)
+        {
+            Instantiate(enemyPrefabSpeed, spawnPoint.position, spawnPoint.rotation);
+        } 
+        else if (n > 0 && n % 5 == 0)
+        {
+            Instantiate(enemyPrefabTank, spawnPoint.position, spawnPoint.rotation);
+        }
+        else
+        {
+            Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
         }
     }
 
