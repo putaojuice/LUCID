@@ -340,7 +340,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: You can also expand the game field based on your own strategic purposes.
     Similarly, the preview tile will be red in colour if it is unable to build at
-    the selected place.
+    the selected place. Press "R" key to rotate your tile.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 86f97f6a57a2444b4b55f64a599ba8cb, type: 2}
   m_sharedMaterial: {fileID: 3224599106337146968, guid: 86f97f6a57a2444b4b55f64a599ba8cb, type: 2}
@@ -1103,6 +1103,7 @@ MonoBehaviour:
   - {fileID: 8163488473328354107}
   selectedColor: {r: 0.49019608, g: 0.49019608, b: 0.49019608, a: 1}
   notSelectedColor: {r: 0.7647059, g: 0.7647059, b: 0.7647059, a: 1}
+  buttonSound: {fileID: 0}
 --- !u!1 &6359006801752596438
 GameObject:
   m_ObjectHideFlags: 0
