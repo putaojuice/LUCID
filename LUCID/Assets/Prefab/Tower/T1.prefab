@@ -5008,7 +5008,7 @@ MonoBehaviour:
   range: 5
   fireRate: 1
   fireCountdown: 0
-  bulletPrefab: {fileID: 5959793224685996657, guid: 6746a920729bb4db596da0cab830e7a8, type: 3}
+  bulletPrefab: {fileID: 5959793224685996657, guid: 2585d491f82484c0a92d95e40601ee9c, type: 3}
   firePosition: {fileID: 3028811186302849627}
   rotationObject: {fileID: 2190648066966626870}
   rotationSpeed: 5

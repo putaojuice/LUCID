@@ -4,9 +4,10 @@ public class Bullet : MonoBehaviour
 {
     private Transform enemyTarget;
 
-    public float bulletSpeed = 5f;
+    [SerializeField] private float bulletSpeed = 5f;
 
-    private float bulletDamage = 10f;
+    [SerializeField] private float bulletDamage = 10f;
+    [SerializeField] private ParticleSystem explosion;
 
     // Update is called once per frame
     void Update()
@@ -39,7 +40,8 @@ public class Bullet : MonoBehaviour
     }
 
     void TargetHit()
-    {        
+    {
+        Instantiate(explosion, transform.position, transform.rotation);
         enemyTarget.gameObject.GetComponent<EnemyController>().Damaged(bulletDamage);
         Debug.Log("Hit");
 

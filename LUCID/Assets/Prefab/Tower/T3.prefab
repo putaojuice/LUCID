@@ -5179,10 +5179,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyTag: Enemy
   enemyTarget: {fileID: 0}
-  range: 0
-  fireRate: 1
+  range: 3
+  fireRate: 1.25
   fireCountdown: 0
-  bulletPrefab: {fileID: 5959793224685996657, guid: 6746a920729bb4db596da0cab830e7a8, type: 3}
+  bulletPrefab: {fileID: 5959793224685996657, guid: f84740b9921604d689eccd5108b8ad9d, type: 3}
   firePosition: {fileID: 2639081283468679881}
   rotationObject: {fileID: 3278915083876688397}
   rotationSpeed: 5

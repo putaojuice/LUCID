@@ -4941,9 +4941,9 @@ MonoBehaviour:
   enemyTag: Enemy
   enemyTarget: {fileID: 0}
   range: 5
-  fireRate: 1
+  fireRate: 2
   fireCountdown: 0
-  bulletPrefab: {fileID: 5959793224685996657, guid: 6746a920729bb4db596da0cab830e7a8, type: 3}
+  bulletPrefab: {fileID: 5959793224685996657, guid: f84740b9921604d689eccd5108b8ad9d, type: 3}
   firePosition: {fileID: 6234907747710369863}
   rotationObject: {fileID: 8027610729360203173}
   rotationSpeed: 5

@@ -204,7 +204,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Do note that after placing down the tiles, the spawn point will relocate
     to the new tile placed if it is not being obstructed by any towers and it is
-    further away than the current spawn point.
+    further away than the current spawn point. Once you are ready, click the double
+    arrow button located at top right corner of your screen.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 86f97f6a57a2444b4b55f64a599ba8cb, type: 2}
   m_sharedMaterial: {fileID: 3224599106337146968, guid: 86f97f6a57a2444b4b55f64a599ba8cb, type: 2}
