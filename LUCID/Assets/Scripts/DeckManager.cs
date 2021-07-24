@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class DeckManager : MonoBehaviour
 {
@@ -111,7 +112,6 @@ public class DeckManager : MonoBehaviour
 
     void Start()
     {
-        //currHandSize = 0;
         DealingTurret();
         DealingTetris();
     }
@@ -139,6 +139,49 @@ public class DeckManager : MonoBehaviour
 			}
             DealTetrisCard();
             currHandSize++;
+        }
+    }
+
+    public void ClearHand()
+    {
+        if (WaveSpawner.waveStart == true && WaveSpawner.waveEnd == false)
+        {
+            while(Hand.Count > 0)
+            {
+                ClearCard(Hand[0]);
+            }
+        }
+    }
+
+    public void ClearCard(CardBlueprint card)
+    {
+        void Destruction()
+        {
+            Hand.Remove(card);
+            Destroy(gameObject);
+            currHandSize--;
+        }
+
+        if (card != null)
+        {
+            if (card.prefab.CompareTag("TurretCard"))
+            {
+                if (card.turretID == 1)
+                {
+                    Destruction();
+                }    
+                else if (card.turretID == 2)
+                {
+                    Destruction();
+                }
+                else if (card.turretID == 3)
+                {
+                    Destruction();
+                }
+            } else if (card.prefab.CompareTag("TetrisCard")) 
+            {
+                Destruction();
+            }
         }
     }
 }
