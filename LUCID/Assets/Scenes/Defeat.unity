@@ -495,8 +495,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Game Over
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 86f97f6a57a2444b4b55f64a599ba8cb, type: 2}
-  m_sharedMaterial: {fileID: 3224599106337146968, guid: 86f97f6a57a2444b4b55f64a599ba8cb, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 54f949a7cd71b43bea07be347ce5cb1b, type: 2}
+  m_sharedMaterial: {fileID: 6806919029849832167, guid: 54f949a7cd71b43bea07be347ce5cb1b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -712,8 +712,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Click anywhere to continue
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 86f97f6a57a2444b4b55f64a599ba8cb, type: 2}
-  m_sharedMaterial: {fileID: 3224599106337146968, guid: 86f97f6a57a2444b4b55f64a599ba8cb, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 54f949a7cd71b43bea07be347ce5cb1b, type: 2}
+  m_sharedMaterial: {fileID: 6806919029849832167, guid: 54f949a7cd71b43bea07be347ce5cb1b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

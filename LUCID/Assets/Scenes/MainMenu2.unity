@@ -2659,8 +2659,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1383925367}
-  m_LocalRotation: {x: -0.4904141, y: 0.044723682, z: 0.02522494, w: 0.86997557}
-  m_LocalPosition: {x: 11.507205, y: -80.83434, z: -47.79766}
+  m_LocalRotation: {x: -0.0063081393, y: 0.009336974, z: 0.000095966505, w: 0.9999365}
+  m_LocalPosition: {x: 921.0382, y: -540.8234, z: -1069.6902}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4196,8 +4196,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2032341796}
-  m_LocalRotation: {x: -0.5000004, y: 0, z: 0, w: 0.86602515}
-  m_LocalPosition: {x: 25, y: -14.94, z: 5.87}
+  m_LocalRotation: {x: -0.38814166, y: 0.05281528, z: 0.022300838, w: 0.9198148}
+  m_LocalPosition: {x: 26.19572, y: -97.00359, z: -81.13077}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4512,10 +4512,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1957504282}
     m_Modifications:
+    - target: {fileID: 6359006801684634961, guid: b823efb6dadc240b0a8e628ec0bbd75c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6359006801707300624, guid: b823efb6dadc240b0a8e628ec0bbd75c, type: 3}
       propertyPath: buttonSound
       value: 
       objectReference: {fileID: 1456573466}
+    - target: {fileID: 6359006801707300626, guid: b823efb6dadc240b0a8e628ec0bbd75c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6359006801707300628, guid: b823efb6dadc240b0a8e628ec0bbd75c, type: 3}
       propertyPath: m_Name
       value: Instructions Panel
