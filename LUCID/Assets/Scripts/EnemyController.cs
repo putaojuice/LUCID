@@ -107,7 +107,6 @@ public class EnemyController : MonoBehaviour
             if (WaveSpawner.numToSpawn == 0)
 			{
                 WaveSpawner.waveEnd = true;
-                WaveSpawner.waveStart = false;
 			}
         }
 	}

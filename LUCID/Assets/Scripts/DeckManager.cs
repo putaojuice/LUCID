@@ -144,44 +144,26 @@ public class DeckManager : MonoBehaviour
 
     public void ClearHand()
     {
-        if (WaveSpawner.waveStart == true && WaveSpawner.waveEnd == false)
-        {
-            while(Hand.Count > 0)
-            {
-                ClearCard(Hand[0]);
-            }
-        }
-    }
+        GameObject[] tetrisCards = GameObject.FindGameObjectsWithTag("TetrisCard");
+        GameObject[] turretCards = GameObject.FindGameObjectsWithTag("TurretCard");
 
-    public void ClearCard(CardBlueprint card)
-    {
-        void Destruction()
+        foreach (GameObject x in tetrisCards)
         {
-            Hand.Remove(card);
-            Destroy(gameObject);
+            Destroy(x);
+        }
+
+        foreach (GameObject x in turretCards)
+        {
+            Destroy(x);
+        }
+
+        while (currHandSize > 0)
+        {
+            deckManager.Hand.RemoveAt(0);
+            UpgradePoints.Add();
             currHandSize--;
         }
-
-        if (card != null)
-        {
-            if (card.prefab.CompareTag("TurretCard"))
-            {
-                if (card.turretID == 1)
-                {
-                    Destruction();
-                }    
-                else if (card.turretID == 2)
-                {
-                    Destruction();
-                }
-                else if (card.turretID == 3)
-                {
-                    Destruction();
-                }
-            } else if (card.prefab.CompareTag("TetrisCard")) 
-            {
-                Destruction();
-            }
-        }
+        Debug.Log("Current hand size: " + currHandSize);
     }
+
 }

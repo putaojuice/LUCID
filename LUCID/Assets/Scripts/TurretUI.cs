@@ -8,6 +8,7 @@ public class TurretUI : MonoBehaviour
     private TurretBase target;
     public TextMeshProUGUI upgradeStatus;
     public Button upgradeButton;
+    public GameObject NotEnoughPoints;
 
     public void SetTarget (TurretBase target)
     {
@@ -40,9 +41,26 @@ public class TurretUI : MonoBehaviour
 
     public void Upgrade ()
     {
-        target.UpgradeTurret();
-        Debug.Log("Turret Upgraded.");
-        TurretController.turretController.DeselectBase();
+        if (UpgradePoints.upgradePoints > 0)
+        {
+            target.UpgradeTurret();
+            Debug.Log("Turret Upgraded.");
+            TurretController.turretController.DeselectBase();
+            UpgradePoints.Minus();
+        } 
+        else 
+        {
+            Debug.Log("Not enough upgrade points");
+            ShowNotEnoughPoints();
+        }
+
+    }
+
+    public void ShowNotEnoughPoints()
+    {
+        GameObject newText = Instantiate(NotEnoughPoints, transform.position, Quaternion.identity, transform) as GameObject;
+        newText.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform, false);
+
     }
 
     public void Destroy ()

@@ -12,6 +12,7 @@ TagManager:
   - Waypoint
   - Spawner
   - CardHand
+  - Canvas
   layers:
   - Default
   - TransparentFX

@@ -25,7 +25,6 @@ public class WaveSpawner : MonoBehaviour
 
     // Boolean value to determine if wave ended
     public static bool waveEnd = false;
-    public static bool waveStart = false;
     [SerializeField] private DayNightSystem dayNightSystem;
 
 	private void Start()
@@ -34,7 +33,6 @@ public class WaveSpawner : MonoBehaviour
         numOfEnemyAlive = 0;
         wave = 0;
         waveEnd = false;
-        waveStart = false;
         deckManager = GameObject.Find("DeckManager").GetComponent<DeckManager>();
     }
 
@@ -53,7 +51,6 @@ public class WaveSpawner : MonoBehaviour
             deckManager.DealingTurret();
             deckManager.DealingTetris();
             waveEnd = false;
-            waveStart = false;
             dayNightSystem.DayTime();
 		}
 	}
@@ -92,7 +89,6 @@ public class WaveSpawner : MonoBehaviour
 
     public void NextWave()
 	{
-        waveStart = true;
         waveEnd = false;
         wave ++;
         Debug.Log("Wave number: " + wave);
