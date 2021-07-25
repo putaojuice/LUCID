@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class GridBase : MonoBehaviour
 {
-    public Color highlightColor;
-    public Color origColor;
+    [SerializeField] private Color highlightColor;
+    [SerializeField] private Color origColor;
 
     private Renderer rend;
     private bool selected;
-    public GridController gridController;
+    [SerializeField] private GridController gridController;
 
     // Start is called before the first frame update
     void Start()

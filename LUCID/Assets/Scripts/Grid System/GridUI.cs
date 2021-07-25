@@ -4,16 +4,10 @@ using UnityEngine;
 
 public class GridUI : MonoBehaviour
 {
-    public GameObject buildingUI;
-    public GridController gridController;
-    public GridGenerate gridGenerate;
+    [SerializeField] private GameObject buildingUI;
+    [SerializeField] private GridController gridController;
+    [SerializeField] private GridGenerate gridGenerate;
     private bool buildMode = false;
-
-    /*public void Building(GameObject obj)
-	{
-        gridController.NewBuild(obj);
-        TogglePanel();
-	}*/
 
     public void TogglePanel()
 	{
@@ -29,19 +23,6 @@ public class GridUI : MonoBehaviour
 
     public void EnableUI()
     {
-        /*if (!buildMode) 
-        {
-            buildMode = !buildMode;
-            TogglePanel();
-            gridGenerate.ToggleGrid(buildMode);
-        }
-        else
-		{
-            buildMode = !buildMode;
-            TogglePanel();
-            gridGenerate.ToggleGrid(buildMode);
-		}*/
-
         buildMode = !buildMode;
         TogglePanel();
         gridGenerate.ToggleGrid(buildMode);

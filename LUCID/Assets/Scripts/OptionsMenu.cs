@@ -5,10 +5,12 @@ using UnityEngine.Audio;
 
 public class OptionsMenu : MonoBehaviour
 {
-	[SerializeField] private AudioMixer audioMixer;
+	[SerializeField] private AudioMixer soundOutput;
+	[SerializeField] private AudioMixer effectOutput;
 	[SerializeField] private GameObject optionsMenu;
 	[SerializeField] private AudioSource buttonSound;
 	private static bool sound = true;
+	private static bool effect = true;
 
 	private void Start() 
 	{
@@ -27,11 +29,20 @@ public class OptionsMenu : MonoBehaviour
 		buttonSound.Play();
 	}
 
-	public void SetVolume(float vol)
+	public void SetSoundVolume(float vol)
 	{
         if (sound)
         {
-            audioMixer.SetFloat("Volume", vol);
+            soundOutput.SetFloat("Volume", vol);
+        }
+		
+	}
+
+	public void SetEffectVolume(float vol)
+	{
+        if (sound)
+        {
+            effectOutput.SetFloat("Volume", vol);
         }
 		
 	}
@@ -41,13 +52,29 @@ public class OptionsMenu : MonoBehaviour
 		if (sound)
 		{
 			sound = false;
-			audioMixer.SetFloat("Volume", -80f);
+			soundOutput.SetFloat("Volume", -80f);
 			buttonSound.Play();
 		}
 		else
 		{
 			sound = true;
-			audioMixer.SetFloat("Volume", 0f);
+			soundOutput.SetFloat("Volume", 0f);
+			buttonSound.Play();
+		}
+	}
+
+	public void ToggleEffect()
+	{
+		if (effect)
+		{
+			effect = false;
+			effectOutput.SetFloat("Volume", -80f);
+			buttonSound.Play();
+		}
+		else
+		{
+			effect = true;
+			effectOutput.SetFloat("Volume", 0f);
 			buttonSound.Play();
 		}
 	}

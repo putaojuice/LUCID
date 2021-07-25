@@ -6,11 +6,11 @@ using UnityEngine.UI;
 public class CardHandler : MonoBehaviour
 {
     TurretController turretController;
-    public GameObject tilePreviewPrefab;
-    public GameObject turretPreviewPrefab;
-    public TurretLevel turret1;
-    public TurretLevel turret2;
-    public TurretLevel turret3;
+    [SerializeField] private GameObject tilePreviewPrefab;
+    [SerializeField] private GameObject turretPreviewPrefab;
+    [SerializeField] private TurretLevel turret1;
+    [SerializeField] private TurretLevel turret2;
+    [SerializeField] private TurretLevel turret3;
     private DeckManager deckManager;
     public string CardName;    
     public Sprite cardImage;

@@ -2,13 +2,13 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 public class TurretBase : MonoBehaviour
 {
-    public Color hoverColor;
-    public GameObject turret;
-    public Color origColor;
+    [SerializeField] private Color hoverColor;
+    [SerializeField] private GameObject turret;
+    [SerializeField] private Color origColor;
     private Renderer rend; 
-    public Vector3 positionOffset;
+    [SerializeField] private Vector3 positionOffset;
     TurretController turretController;
-    public TurretLevel turretLevel;
+    [SerializeField] private TurretLevel turretLevel;
     public int isUpgraded = 0;
     public static bool building = false;
 

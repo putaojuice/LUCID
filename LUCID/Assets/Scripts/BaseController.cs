@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class BaseController : MonoBehaviour
 {
-    public Image healthBar;
+    [SerializeField] private Image healthBar;
     [SerializeField] private float baseHP;
     private float startHP;
     private bool baseDestroyed = false;

@@ -5,17 +5,17 @@ using UnityEngine;
 public class GridGenerate : MonoBehaviour
 {
     [Header("Grid Parameters")]
-    public int xVal;
-    public int zVal;
+    [SerializeField] private int xVal;
+    [SerializeField] private int zVal;
     private List<GameObject> grid = new List<GameObject>();
 
     [Header("Block Parameters")]
-    public GameObject blockPrefab;
-    public float blockSize;
+    [SerializeField] private GameObject blockPrefab;
+    [SerializeField] private float blockSize;
 
-    public GridController gridController;
+    [SerializeField] private GridController gridController;
 
-    public GameObject baseGrid;
+    [SerializeField] private GameObject baseGrid;
 
     // Start is called before the first frame update
     void Start()

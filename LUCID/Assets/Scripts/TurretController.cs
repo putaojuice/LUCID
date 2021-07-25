@@ -6,15 +6,14 @@ public class TurretController : MonoBehaviour
     public static TurretController turretController;
 
     private GameObject turretPreviewPrefab;
-    public Camera cam;
-	public LayerMask layer;
+    [SerializeField] private Camera cam;
+	[SerializeField] private LayerMask layer;
     [SerializeField] private GameObject playerBase;
     [SerializeField] private NavMeshAgent agent;
     private bool isBlockingPath = false;
-
     private TurretLevel turretSelected;
     private TurretBase turretBase;
-    public TurretUI turretUI;
+    [SerializeField] private TurretUI turretUI;
     
     void Awake () 
     {

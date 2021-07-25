@@ -26,16 +26,6 @@ public class MainMenu : MonoBehaviour
 		SceneManager.LoadScene(1);
 	}
 
-	// public void OffSettings()
-	// {
-	// 	optionsMenu.SetActive(false);
-	// }
-
-	// public void OnSettings()
-	// {
-	// 	optionsMenu.SetActive(true);
-	// }
-
 	public void OffCredits()
 	{
 		creditsMenu.SetActive(false);
@@ -48,22 +38,8 @@ public class MainMenu : MonoBehaviour
 		buttonSound.Play();
 	}
 
-	// public void SetVolume(float vol)
-	// {
-	// 	audioMixer.SetFloat("Volume", vol);
-	// }
-
-	// public void ToggleSound()
-	// {
-	// 	if (sound)
-	// 	{
-	// 		sound = false;
-	// 		audioMixer.SetFloat("Volume", -80f);
-	// 	}
-	// 	else
-	// 	{
-	// 		sound = true;
-	// 		audioMixer.SetFloat("Volume", 0f);
-	// 	}
-	// }
+	public void QuitGame()
+	{
+		Application.Quit();
+	}
 }

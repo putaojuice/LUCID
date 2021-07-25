@@ -5,16 +5,16 @@ using System.Linq;
 public class DeckManager : MonoBehaviour
 {
     private static DeckManager deckManager;
-    public List<CardBlueprint> TurretDeckList = new List<CardBlueprint>();
-    public List<CardBlueprint> TetrisDeckList = new List<CardBlueprint>();
-    public Stack<CardBlueprint> TurretDeck = new Stack<CardBlueprint>();
-    public Stack<CardBlueprint> TetrisDeck = new Stack<CardBlueprint>();
+    [SerializeField] private List<CardBlueprint> TurretDeckList = new List<CardBlueprint>();
+    [SerializeField] private List<CardBlueprint> TetrisDeckList = new List<CardBlueprint>();
+    [SerializeField] private Stack<CardBlueprint> TurretDeck = new Stack<CardBlueprint>();
+    [SerializeField] private Stack<CardBlueprint> TetrisDeck = new Stack<CardBlueprint>();
     public List<CardBlueprint> Hand = new List<CardBlueprint>();
-    public Transform DeckPanel;
+    [SerializeField] private Transform DeckPanel;
 
-    public int maxHandSize = 5;
-    public int maxTurretHandSize = 2;
-    public int maxTetrisHandSize = 3;
+    [SerializeField] private int maxHandSize = 5;
+    [SerializeField] private int maxTurretHandSize = 2;
+    [SerializeField] private int maxTetrisHandSize = 3;
     public static int currHandSize = 0;
 
     private void Awake()

@@ -9,7 +9,7 @@ public class WhaleMovement : MonoBehaviour
     private int pointer = 0;
     private Transform currTarget;
 
-    public ParticleSystem ripple;
+    [SerializeField] private ParticleSystem ripple;
 
     private float timer = 1f;
 

@@ -5,19 +5,19 @@ using UnityEngine;
 public class Turret : MonoBehaviour
 {
     [Header("Enemy Target Attributes")]
-    public string enemyTag = "Enemy";
-    public Transform enemyTarget;
+    private string enemyTag = "Enemy";
+    [SerializeField] private Transform enemyTarget;
     
     [Header("Tower Attributes")]
-    public float range;
-    public float fireRate = 1f;
-    public float fireCountdown = 0f;
+    [SerializeField] private float range;
+    [SerializeField] private float fireRate = 1f;
+    [SerializeField] private float fireCountdown = 0f;
     
     [Header("Turret Gun Attributes")]
-    public GameObject bulletPrefab;
-    public Transform firePosition;
-    public GameObject rotationObject;
-    public float rotationSpeed = 5f;
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private Transform firePosition;
+    [SerializeField] private GameObject rotationObject;
+    [SerializeField] private float rotationSpeed = 5f;
     
     
 

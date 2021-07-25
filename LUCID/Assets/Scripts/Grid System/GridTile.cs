@@ -6,22 +6,15 @@ public class GridTile : MonoBehaviour
 {
     private List<GameObject> obj = new List<GameObject>();
 	private List<GridBase> ground = new List<GridBase>();
-
-
-	//public Material greenBuild;
-	//public Material redBuild;
-	public Material tileMat;
-	public Color buildableColor;
-	public Color unbuildableColor;
-
-	public GameObject buildPrefab;
-	//private MeshRenderer rend;
+	[SerializeField] private Material tileMat;
+	[SerializeField] private Color buildableColor;
+	[SerializeField] private Color unbuildableColor;
+	[SerializeField] private GameObject buildPrefab;
 	private bool buildable = false;
 	private bool rotated = false;
 
 	private void Start()
 	{
-		//rend = GetComponent<MeshRenderer>();
 		ChangeColor();
 	}
 
@@ -63,13 +56,11 @@ public class GridTile : MonoBehaviour
 	{
 		if (obj.Count == 0)
 		{
-			//rend.material = greenBuild;
 			tileMat.SetColor("_Color", buildableColor);
 			buildable = true;
 		}
 		else
 		{
-			//rend.material = redBuild;
 			tileMat.SetColor("_Color", unbuildableColor);
 			buildable = false;
 		}

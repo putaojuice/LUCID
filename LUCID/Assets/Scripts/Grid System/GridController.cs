@@ -5,9 +5,9 @@ using UnityEngine.AI;
 
 public class GridController : MonoBehaviour
 {
-    public Camera cam;
-	public LayerMask layer;
-	public GridUI gridUI;
+    [SerializeField] private Camera cam;
+	[SerializeField] private LayerMask layer;
+	[SerializeField] private GridUI gridUI;
 	private GameObject previewPrefab;
 	private GridTile gridTile;
 	private bool isBuilding = false;

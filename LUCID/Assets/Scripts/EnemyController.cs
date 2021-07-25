@@ -16,9 +16,9 @@ public class EnemyController : MonoBehaviour
     private float startHP;
     private bool enemyDeath = false;
 
-    public float enemyDamage = 1f;
+    [SerializeField] private float enemyDamage = 1f;
 
-    public Image healthBar;
+    [SerializeField] private Image healthBar;
 
     // Start is called before the first frame update
     void Start()
@@ -35,18 +35,6 @@ public class EnemyController : MonoBehaviour
         // Initialise enemy HP based on which wave it is right now. Enemy HP increase by 10 every 5 rounds.
         startHP = 15f + Mathf.Ceil(WaveSpawner.wave / 5) * 10f * hpModifier;
         enemyHP = startHP;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //enemy.SetDestination(Base.transform.position);
-
-        /*if (enemyDeath) 
-        {
-            enemyDeath = false;
-            EnemyDestroy();
-        }*/
     }
 
     IEnumerator PlayDissolve(float duration) 

@@ -4,11 +4,11 @@ using TMPro;
 
 public class TurretUI : MonoBehaviour
 {
-    public GameObject ui;
-    private TurretBase target;
-    public TextMeshProUGUI upgradeStatus;
-    public Button upgradeButton;
-    public GameObject NotEnoughPoints;
+    [SerializeField] private GameObject ui;
+    [SerializeField] private TurretBase target;
+    [SerializeField] private TextMeshProUGUI upgradeStatus;
+    [SerializeField] private Button upgradeButton;
+    [SerializeField] private GameObject NotEnoughPoints;
 
     public void SetTarget (TurretBase target)
     {
