@@ -12283,8 +12283,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1154027436}
-  m_LocalRotation: {x: -0.406166, y: 0.045537412, z: 0.02029289, w: 0.91243833}
-  m_LocalPosition: {x: 3.7748566, y: -55.138153, z: -32.14}
+  m_LocalRotation: {x: -0.38268322, y: 0, z: 0, w: 0.9238796}
+  m_LocalPosition: {x: 20, y: -11.86, z: 8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12794,6 +12794,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TurretDeckList:
+  - {fileID: 11400000, guid: fe50d29046e17418f81f9d8e8c6a692b, type: 2}
+  - {fileID: 11400000, guid: 51bc52d34e51f4cddb71341e0d208f9b, type: 2}
+  - {fileID: 11400000, guid: 93e3b260a4272448faf7bb6d367de25a, type: 2}
   - {fileID: 11400000, guid: fe50d29046e17418f81f9d8e8c6a692b, type: 2}
   - {fileID: 11400000, guid: 51bc52d34e51f4cddb71341e0d208f9b, type: 2}
   - {fileID: 11400000, guid: 93e3b260a4272448faf7bb6d367de25a, type: 2}

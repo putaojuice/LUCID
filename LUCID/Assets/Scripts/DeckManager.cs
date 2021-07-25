@@ -30,26 +30,26 @@ public class DeckManager : MonoBehaviour
         // Fisher Yates Algo
         var rand = new System.Random();
         
-        for (var n = TurretDeckList.Count -1; n > 0; --n)
+        for (var n = TurretDeckList.Count -1; n > 0; n--)
         {
-            var next = rand.Next(n + 1);
-            var temp = TurretDeckList[next];
+            int next = rand.Next(n+1);
+            var temp = TurretDeckList[n];
             TurretDeckList[n] = TurretDeckList[next];
             TurretDeckList[next] = temp;
-
         }
 
         foreach(var card in TurretDeckList)
         {
             TurretDeck.Push(card);
         }
+
     }
 
     private void ResetTetrisDeck()
     {
         // Fisher Yates Algo
         var rand = new System.Random();
-        for (var n = TetrisDeckList.Count -1; n > 0; --n)
+        for (var n = TetrisDeckList.Count -1; n > 0; n--)
         {
             var next = rand.Next(n + 1);
             var temp = TetrisDeckList[n];
