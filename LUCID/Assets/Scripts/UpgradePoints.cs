@@ -23,9 +23,9 @@ public class UpgradePoints : MonoBehaviour
         upgradePoints++;
     }
 
-    public static void Minus ()
+    public static void Minus (int n)
     {
-        upgradePoints--;
+        upgradePoints -= n;
     }
 
 }

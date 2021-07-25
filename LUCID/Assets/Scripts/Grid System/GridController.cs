@@ -15,12 +15,15 @@ public class GridController : MonoBehaviour
 
 	public NavMeshSurface surf;
 
+	[SerializeField] private DeckManager deckManager;
+
     // Start is called before the first frame update
     void Start()
     {
 		// BuildNavMesh on start up
 		surf = GetComponent<NavMeshSurface>();
 		surf.BuildNavMesh();
+		deckManager = GameObject.Find("DeckManager").GetComponent<DeckManager>();
     }
 
     private void Update()
@@ -48,6 +51,7 @@ public class GridController : MonoBehaviour
 		if (Input.GetMouseButton(0) && isBuilding && gridTile.GetBuildable())
 		{
 			BuildIt();
+			deckManager.ShowHandUI();
 		}
 		
 		if (Input.GetMouseButton(1) && isBuilding)

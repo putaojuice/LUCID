@@ -9,11 +9,13 @@ public class TurretBase : MonoBehaviour
     [SerializeField] private Vector3 positionOffset;
     TurretController turretController;
     [SerializeField] private TurretLevel turretLevel;
+    [SerializeField] private DeckManager deckManager;
     public int isUpgraded = 0;
     public static bool building = false;
 
     void Start () 
     {
+        deckManager = GameObject.Find("DeckManager").GetComponent<DeckManager>();
         rend = GetComponent<Renderer>();
         origColor = rend.material.color;
         turretController = TurretController.turretController;
@@ -23,7 +25,6 @@ public class TurretBase : MonoBehaviour
 	{
 		return transform.position + positionOffset;
 	}
-
 
     void OnMouseDown ()
     {
@@ -48,7 +49,8 @@ public class TurretBase : MonoBehaviour
             {
                 BuildTurret(turretController.GetTurret());
                 turretController.DeselectBase();
-                turretController.DestroyPreview();    
+                turretController.DestroyPreview();
+                deckManager.ShowHandUI();
             }
     }
 
@@ -121,5 +123,10 @@ public class TurretBase : MonoBehaviour
     public static bool IsBuilding()
     {
         return building;
+    }
+
+    public string TurretTag()
+    {
+        return turret.tag.ToString();
     }
 }

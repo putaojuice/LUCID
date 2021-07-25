@@ -41,13 +41,20 @@ public class TurretUI : MonoBehaviour
 
     public void Upgrade ()
     {
-        if (UpgradePoints.upgradePoints > 0)
+        if (UpgradePoints.upgradePoints > 2 && target.TurretTag() == "Tier1Turret")
         {
             target.UpgradeTurret();
             Debug.Log("Turret Upgraded.");
             TurretController.turretController.DeselectBase();
-            UpgradePoints.Minus();
+            UpgradePoints.Minus(3);
         } 
+        else if (UpgradePoints.upgradePoints > 4 && target.TurretTag() == "Tier2Turret")
+        {
+            target.UpgradeTurret();
+            Debug.Log("Turret Upgraded.");
+            TurretController.turretController.DeselectBase();
+            UpgradePoints.Minus(5);
+        }
         else 
         {
             Debug.Log("Not enough upgrade points");

@@ -4952,7 +4952,7 @@ GameObject:
   - component: {fileID: 6117251904850801515}
   m_Layer: 0
   m_Name: T1
-  m_TagString: Untagged
+  m_TagString: Tier1Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5003,7 +5003,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2bd56ff81fc047cfa4f8f4457a61b93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyTag: Enemy
   enemyTarget: {fileID: 0}
   range: 5
   fireRate: 1

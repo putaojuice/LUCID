@@ -63,6 +63,7 @@ public class CardHandler : MonoBehaviour
                     TurretBase.BuildingMode();
                     turretController.NewBuild(turretPreviewPrefab);
                     SelectTurret1();
+                    deckManager.HideHandUI();
                     Destruction();
                 }    
                 else if (card.turretID == 2)
@@ -70,6 +71,7 @@ public class CardHandler : MonoBehaviour
                     TurretBase.BuildingMode();
                     turretController.NewBuild(turretPreviewPrefab);
                     SelectTurret2();
+                    deckManager.HideHandUI();
                     Destruction();
                 }
                 else if (card.turretID == 3)
@@ -77,6 +79,7 @@ public class CardHandler : MonoBehaviour
                     TurretBase.BuildingMode();
                     turretController.NewBuild(turretPreviewPrefab);
                     SelectTurret3();
+                    deckManager.HideHandUI();
                     Destruction();
                 }
             } else if (card.prefab.CompareTag("TetrisCard")) 
@@ -84,6 +87,7 @@ public class CardHandler : MonoBehaviour
                 Debug.Log("Tetris card selected.");
                 gridController.NewBuild(tilePreviewPrefab);
                 TurretBase.EndBuild();
+                deckManager.HideHandUI();
                 Destruction();
             }
         }

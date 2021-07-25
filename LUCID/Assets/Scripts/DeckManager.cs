@@ -11,7 +11,7 @@ public class DeckManager : MonoBehaviour
     [SerializeField] private Stack<CardBlueprint> TetrisDeck = new Stack<CardBlueprint>();
     public List<CardBlueprint> Hand = new List<CardBlueprint>();
     [SerializeField] private Transform DeckPanel;
-
+    [SerializeField] private GameObject handUI;
     [SerializeField] private int maxHandSize = 5;
     [SerializeField] private int maxTurretHandSize = 2;
     [SerializeField] private int maxTetrisHandSize = 3;
@@ -166,4 +166,13 @@ public class DeckManager : MonoBehaviour
         Debug.Log("Current hand size: " + currHandSize);
     }
 
+    public void ShowHandUI()
+    {
+        handUI.SetActive(true);
+    }
+
+    public void HideHandUI()
+    {
+        handUI.SetActive(false);
+    }
 }

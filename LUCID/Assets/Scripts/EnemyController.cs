@@ -86,6 +86,7 @@ public class EnemyController : MonoBehaviour
         if (gameObject != null) {
             // Play enemy dissolve animation from dissolve shader
             StartCoroutine(PlayDissolve(1f));
+            GameObject.Find("Enemy Death").GetComponent<AudioSource>().Play();
 
             // Destroy after 1 sec delay
             Destroy(gameObject, 1.0f);
