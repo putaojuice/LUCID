@@ -80,7 +80,9 @@ public class TurretController : MonoBehaviour
 		{
             if (hit.transform.CompareTag("GridFloor"))
             {
-                PositionObj(hit.point);
+                GameObject go = hit.transform.gameObject;
+                PositionObj(go.transform.position);
+                // PositionObj(hit.point);
                 turretPreviewPrefab.GetComponent<TurretPreview>().BuildableColor();
                 PathCalculation();
             }
@@ -98,7 +100,8 @@ public class TurretController : MonoBehaviour
 	{
 		int x = Mathf.RoundToInt(position.x);
 		int z = Mathf.RoundToInt(position.z);
-        turretPreviewPrefab.transform.position = new Vector3(x + 0.5f, 1.5f, z + 0.5f);
+        turretPreviewPrefab.transform.position = position + new Vector3(0f, 0.5f, 0f);
+        // turretPreviewPrefab.transform.position = new Vector3(x + 0.5f, 1.5f, z + 0.5f);
 	}
 
     public void DestroyPreview()
@@ -115,13 +118,13 @@ public class TurretController : MonoBehaviour
 
         if (path.status == NavMeshPathStatus.PathComplete)
         {
-            Debug.Log(path.status);
+            // Debug.Log(path.status);
             turretPreviewPrefab.GetComponent<TurretPreview>().BuildableColor();
             isBlockingPath = false;
         }
         else 
         {
-            Debug.Log(path.status);
+            // Debug.Log(path.status);
             turretPreviewPrefab.GetComponent<TurretPreview>().UnbuildableColor();
             isBlockingPath = true;
         }
